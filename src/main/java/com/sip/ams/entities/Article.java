@@ -24,9 +24,11 @@ public class Article {
 	@Column(name = "label")
 	private String label;
 
-	
 	@Column(name = "price")
 	private float price;
+
+	@Column(name = "picture")
+	private String picture;
 
 	public Article() {
 	}
@@ -34,6 +36,12 @@ public class Article {
 	public Article(String label, float price) {
 		this.price = price;
 		this.label = label;
+	}
+
+	public Article(String label, float price, String picture) {
+		this.price = price;
+		this.label = label;
+		this.picture = picture;
 	}
 
 	public void setId(long id) {
@@ -58,6 +66,14 @@ public class Article {
 
 	public void setPrice(float price) {
 		this.price = price;
+	}
+
+	public void setPicture(String picture) {
+		this.picture = picture;
+	}
+
+	public String getPicture() {
+		return picture;
 	}
 
 	/**** Many To One ****/
