@@ -11,9 +11,9 @@
 
 			<footer>
 				<!-- this is footer -->
-				© 2019 SIP
+				© 2023 SIP
 				<span sec:authorize="isAuthenticated()">
-					| Logged user: <span sec:authentication="name"></span> |
+					| Logged user: <span sec:authentication="principal.lastName"></span> |
 					Roles: <span sec:authentication="principal.authorities"></span>
 				</span>
 			</footer>
